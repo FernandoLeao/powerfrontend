@@ -8,7 +8,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppPrincipalComponent } from './app-principal/app-principal.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule,MatCardModule,MatGridListModule,MatTableModule,MatInputModule  } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, 
+        MatListModule,MatCardModule,MatGridListModule,MatTableModule,
+        MatInputModule,MatSlideToggleModule  } 
+      from '@angular/material';
 import { UsinaComponent } from './usina/usina.component';
 import { AgenteComponent } from './agente/agente.component';
 import { EquipamentoComponent } from './equipamento/equipamento.component';
@@ -53,6 +56,7 @@ import { ToastrModule } from 'ngx-toastr';
     MatGridListModule,
     MatTableModule,
     MatInputModule,
+    MatSlideToggleModule,
     FormsModule,
     ToastrModule.forRoot({
       timeOut: 3000,
@@ -66,6 +70,7 @@ import { ToastrModule } from 'ngx-toastr';
       {path : 'cobertura',component:CoberturaComponent,data:{title:'Cobertura'}},
       { path: 'usina/:id',      component: UsinaDetailComponent },
       { path: 'agente/:id',      component: AgenteDetailComponent },
+      { path: 'equipamento/:id',      component: EquipamentoDetailComponent },
       {path : '',redirectTo : 'usina' ,pathMatch:'full'},
     ])
   ],

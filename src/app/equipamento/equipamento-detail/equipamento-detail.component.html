@@ -1,3 +1,39 @@
-<p>
-  equipamento-detail works!
-</p>
+
+<mat-card>
+  
+      <mat-card-title>Cadastro de Equipamentos</mat-card-title>
+  
+  <form class="example-form" *ngIf="equipamento">
+  
+      <div>
+          <mat-form-field class="example-full-width">
+              <input matInput placeholder="Entre com nome do Equipamento"  [(ngModel)] = "equipamento.nome" name="nome" >
+          </mat-form-field>
+      </div>
+     
+    
+      <div>
+          <mat-form-field class="example-full-width">
+              <input matInput placeholder="Entre com Capacidade Transmissao"  [(ngModel)] = "equipamento.capacidadeTransmissao" name="capacidadeTransmissao" >
+          </mat-form-field>
+      </div>
+
+      <div>
+        
+        <div>
+            <mat-slide-toggle [(ngModel)] = "equipamento.ativo" name="ativo">Equipamento Ativo?</mat-slide-toggle>
+        </div>
+
+        <br>
+          
+           
+
+    </div> 
+        
+        <div>
+            <button mat-raised-button color="primary" (click)="onSalvar()">Salvar</button>
+            <button mat-raised-button color="warn" (click)="onCancelar()">Cancelar</button>
+        </div>
+    </form>
+  
+  </mat-card>
