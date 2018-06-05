@@ -1,0 +1,34 @@
+
+<mat-card>
+
+    <mat-card-title>Cadastro de Usinas</mat-card-title>
+
+<form class="example-form" *ngIf="usina">
+
+    <div>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Entre com nome da Usina"  [(ngModel)] = "usina.nome" name="nome" >
+        </mat-form-field>
+    </div>
+   
+  
+    <div>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Entre com Capacidade Geração"  [(ngModel)] = "usina.capacidadeGeracao" name="capacidadeGeracao" >
+        </mat-form-field>
+    </div>
+     
+
+      <div>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Entre com Valor Hora"  [(ngModel)] = "usina.valorHora" name="valorHora" >
+          </mat-form-field>
+      </div>
+
+      <div>
+          <button mat-raised-button color="primary" (click)="onSalvar()">Salvar</button>
+          <button mat-raised-button color="warn" (click)="onCancelar()">Cancelar</button>
+      </div>
+  </form>
+
+</mat-card>
